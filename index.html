@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WoW Forever Gameplay Sims</title>
+<meta name="description" content="Browser simulators for practising level 60 DPS rotations in World of Warcraft: Forever.">
+<style>
+  :root { --bg: #0f1218; --panel: #171b24; --border: #2a3242; --text: #e6e9ef; --muted: #9aa4b5; --dim: #667089; --hi: #f5c451; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; min-height: 100vh; color: var(--text);
+    font-family: Inter, "Segoe UI", system-ui, -apple-system, sans-serif;
+    background: var(--bg) radial-gradient(1100px 520px at 50% -180px, #1b2233, transparent) no-repeat;
+  }
+  main { max-width: 960px; margin: 0 auto; padding: 48px 20px 40px; }
+  header { text-align: center; margin-bottom: 36px; }
+  h1 { font-size: 34px; margin: 0 0 10px; letter-spacing: .2px; }
+  h1 span { color: var(--hi); }
+  header p { color: var(--muted); font-size: 16px; max-width: 620px; margin: 0 auto; line-height: 1.5; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 18px; }
+  .card {
+    --accent: #fff; display: flex; flex-direction: column; gap: 12px; padding: 20px; text-decoration: none; color: inherit;
+    background: var(--panel); border: 1px solid var(--border); border-top: 3px solid var(--accent); border-radius: 12px;
+    transition: transform .12s, border-color .12s, box-shadow .12s;
+  }
+  .card:hover { transform: translateY(-3px); border-color: var(--accent); box-shadow: 0 10px 30px rgba(0, 0, 0, .35); }
+  .card .top { display: flex; align-items: center; gap: 12px; }
+  .card img { width: 44px; height: 44px; border-radius: 8px; border: 1px solid var(--border); }
+  .card h2 { margin: 0; font-size: 19px; color: var(--accent); }
+  .card .spec { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: .6px; }
+  .card p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.5; flex: 1; }
+  .card .play { align-self: flex-start; padding: 7px 16px; border-radius: 999px; font-size: 13px; font-weight: 700; background: var(--accent); color: #0f1218; }
+  .warrior { --accent: #c79c6e; } .paladin { --accent: #f58cba; } .shaman { --accent: #3d9bff; } .druid { --accent: #ff7d0a; }
+  section.about { margin-top: 40px; padding: 20px; background: var(--panel); border: 1px solid var(--border); border-radius: 12px; }
+  section.about h3 { margin: 0 0 8px; font-size: 12px; letter-spacing: .6px; text-transform: uppercase; color: var(--muted); }
+  section.about ul { margin: 0; padding-left: 18px; color: var(--muted); font-size: 14px; line-height: 1.6; }
+  section.about a, footer a { color: var(--hi); text-decoration: none; }
+  section.about a:hover, footer a:hover { text-decoration: underline; }
+  footer { margin-top: 28px; text-align: center; color: var(--dim); font-size: 12px; line-height: 1.6; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>WoW Forever <span>Gameplay Sims</span></h1>
+    <p>Practise a level 60 DPS rotation in your browser. You press the abilities; the sim swings at a raid boss dummy, tracks your resources and cooldowns, and shows a Warcraft Logs-style breakdown when the dummy dies.</p>
+  </header>
+
+  <div class="grid">
+    <a class="card warrior" href="https://wowf-gameplay.github.io/warrior-gameplay-sim/">
+      <div class="top"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_warrior.jpg" alt=""><div><h2>Warrior</h2><div class="spec">Fury</div></div></div>
+      <p>Dual-wield fury with Forever's normalised rage. Bloodthirst, Whirlwind, Heroic Strike queueing, Execute, Overpower with automatic stance switching, and the big cooldowns.</p>
+      <span class="play">Play</span>
+    </a>
+    <a class="card paladin" href="https://wowf-gameplay.github.io/paladin-gameplay-sim/">
+      <div class="top"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_paladin.jpg" alt=""><div><h2>Paladin</h2><div class="spec">Retribution &middot; Shockadin</div></div></div>
+      <p>Seal twisting with Twist of Light echoes, Judgement, Holy Strike and Consecration on Retribution; Holy Shock and Divine Favor on Shockadin. Switch spec on the page.</p>
+      <span class="play">Play</span>
+    </a>
+    <a class="card shaman" href="https://wowf-gameplay.github.io/shaman-gameplay-sim/">
+      <div class="top"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_shaman.jpg" alt=""><div><h2>Shaman</h2><div class="spec">Enhancement</div></div></div>
+      <p>Two-hander with Rockbiter. Stormstrike, shocks, Fire Nova off Searing Totem, and Maelstrom Weapon stacks for instant, free Lightning Bolts.</p>
+      <span class="play">Play</span>
+    </a>
+    <a class="card druid" href="https://wowf-gameplay.github.io/druid-gameplay-sim/">
+      <div class="top"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_druid.jpg" alt=""><div><h2>Druid</h2><div class="spec">Feral (cat)</div></div></div>
+      <p>Ravage out of Prowl, Shred to five Combo Points, keep Rip rolling, and turn mana into Energy with Shifting Power. Continuous Energy regeneration.</p>
+      <span class="play">Play</span>
+    </a>
+  </div>
+
+  <section class="about">
+    <h3>About the sims</h3>
+    <ul>
+      <li>Every sim has toggles for raid buffs, consumables and boss debuffs, a Gear tab, a Talents tab with hover tooltips, and a Stats tab for entering your own character stats.</li>
+      <li>Keys are rebindable (with Shift and Ctrl), dummy health is adjustable, and the end-of-fight breakdown mirrors a Warcraft Logs damage table.</li>
+      <li>Default gear, enchants and talent builds follow the <a href="https://mythicsim.com/wow-forever/tier-list">MythicSim</a> tier-list presets. Mechanics follow the open-source engine MythicSim is built on and Forever beta tooltips, and may change as the beta does.</li>
+      <li>Source code: <a href="https://github.com/wowf-gameplay">github.com/wowf-gameplay</a>. Each sim is a single HTML file with no build step.</li>
+    </ul>
+  </section>
+
+  <footer>Fan project, not affiliated with Blizzard Entertainment. World of Warcraft is a trademark of Blizzard Entertainment, Inc.<br>Icons are served by Wowhead.</footer>
+</main>
+</body>
+</html>
